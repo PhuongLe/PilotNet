@@ -53,7 +53,7 @@ if __name__ == '__main__':
             while(cv2.waitKey(10) != ord('q')):
                 full_image = scipy.misc.imread(FLAGS.dataset_dir + "/" + str(i) + ".jpg", mode="RGB")
                 image = scipy.misc.imresize(full_image[-150:], [66, 200]) / 255.0
-
+                #print(image)
                 steering = sess.run(
                     model.steering,
                     feed_dict={

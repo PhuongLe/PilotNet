@@ -1,6 +1,7 @@
 #!/bin/bash
 
 export online=false
+export carla=false
 export DATASET_DIR="./data/datasets/driving_dataset"
 export MODEL_FILE="./data/models/nvidia/model.ckpt"
 
@@ -19,6 +20,10 @@ while test $# -gt 0; do
     -model_file)
       export MODEL_FILE="$2"
       shift
+      shift
+      ;;
+    -carla)
+      export carla=true
       shift
       ;;
     -online)
@@ -45,7 +50,10 @@ done
 
 if [ $online == true ]; then
   python ./src/run_capture.py \
-    --model_file $MODEL_FILE
+    --model $MODEL_FILE
+elif [ $carla == true ]; then
+  python ./src/run_carla.py \
+    --model $MODEL_FILE
 else
   python ./src/run_dataset.py \
     --model_file $MODEL_FILE \

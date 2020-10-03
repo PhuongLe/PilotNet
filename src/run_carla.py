@@ -27,8 +27,8 @@ WIN_MARGIN_LEFT = 240
 WIN_MARGIN_TOP = 240
 WIN_MARGIN_BETWEEN = 180
 
-IM_WIDTH = 640
-IM_HEIGHT = 480
+IM_WIDTH = 455
+IM_HEIGHT = 256
 
 counter = 0
 #counterMod = 0
@@ -85,7 +85,7 @@ if __name__ == '__main__':
         #blueprint.set_attribute('sensor_tick', '0.1')
 
         # Adjust sensor relative to vehicle
-        transform = carla.Transform(carla.Location(x=0.8, z=1.7))
+        transform = carla.Transform(carla.Location(x=2.5, z=0.75))
 
         # spawn the sensor and attach to vehicle.
         sensor = world.spawn_actor(blueprint, transform, attach_to=vehicle)

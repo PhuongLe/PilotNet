@@ -2,6 +2,7 @@
 
 export online=false
 export carla=false
+export tensorfi=false
 export DATASET_DIR="./data/datasets/driving_dataset"
 export MODEL_FILE="./data/models/nvidia/model.ckpt"
 
@@ -24,6 +25,10 @@ while test $# -gt 0; do
       ;;
     -carla)
       export carla=true
+      shift
+      ;;
+    -tensorfi)
+      export tensorfi=true
       shift
       ;;
     -online)
@@ -54,8 +59,11 @@ if [ $online == true ]; then
 elif [ $carla == true ]; then
   python ./src/run_carla.py \
     --model $MODEL_FILE
+elif [ $tensorfi == true ]; then
+  python ./src/run_tensorfi_model_injection.py \
+    --model_file $MODEL_FILE
 else
   python ./src/run_dataset.py \
-    --model_file $MODEL_FILE \
+    --model_file $MODEL_FILE 
     --dataset_dir $DATASET_DIR
 fi

@@ -1,0 +1,68 @@
+Starting log at 2020-10-08 23:52:23.907245
+
+{
+	Count : 3
+	Injected : 0.0
+	OpName : Ops.SUB
+	Original : 0.0
+	Time : 0:00:00.001978
+ }
+{
+	Count : 10
+	Injected : 1.0
+	OpName : Ops.SUB
+	Original : 1.0
+	Time : 0:00:00.017470
+ }
+{
+	Count : 15
+	Injected : 1.0
+	OpName : Ops.REALDIV
+	Original : 1.0
+	Time : 0:00:00.043147
+ }
+{
+	Count : 21
+	Injected : 0.0
+	OpName : Ops.SUB
+	Original : 0.0
+	Time : 0:00:00.052080
+ }
+{
+	Count : 23
+	Injected : 1.0
+	OpName : Ops.SUB
+	Original : 1.0
+	Time : 0:00:00.066432
+ }
+{
+	Count : 25
+	Injected : 1.0
+	OpName : Ops.REALDIV
+	Original : 1.0
+	Time : 0:00:00.073672
+ }
+{
+	Count : 31
+	Injected : 0.0
+	OpName : Ops.SUB
+	Original : 0.0
+	Time : 0:00:00.090409
+ }
+{
+	Count : 33
+	Injected : 1.0
+	OpName : Ops.SUB
+	Original : 1.0
+	Time : 0:00:00.095027
+ }
+{
+	Count : 36
+	Injected : 1.0
+	OpName : Ops.REALDIV
+	Original : 1.0
+	Time : 0:00:00.095603
+ }
+
+---------------------------------------
+Done injections

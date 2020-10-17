@@ -1,0 +1,202 @@
+WARNING:tensorflow:From /home/phoebe/capstone/PilotNet/src/nets/pilotNet.py:18: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From /home/phoebe/capstone/PilotNet/src/nets/pilotNet.py:4: The name tf.truncated_normal is deprecated. Please use tf.random.truncated_normal instead.
+
+WARNING:tensorflow:From /home/phoebe/capstone/PilotNet/src/nets/pilotNet.py:62: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From ./src/run_tensorfi_model_injection.py:30: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2020-10-16 22:26:45.006996: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-10-16 22:26:45.030419: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-10-16 22:26:45.031110: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1650 major: 7 minor: 5 memoryClockRate(GHz): 1.74
+pciBusID: 0000:0c:00.0
+2020-10-16 22:26:45.031251: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcudart.so.10.0'; dlerror: libcudart.so.10.0: cannot open shared object file: No such file or directory
+2020-10-16 22:26:45.031327: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcublas.so.10.0'; dlerror: libcublas.so.10.0: cannot open shared object file: No such file or directory
+2020-10-16 22:26:45.031398: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcufft.so.10.0'; dlerror: libcufft.so.10.0: cannot open shared object file: No such file or directory
+2020-10-16 22:26:45.031477: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcurand.so.10.0'; dlerror: libcurand.so.10.0: cannot open shared object file: No such file or directory
+2020-10-16 22:26:45.031565: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcusolver.so.10.0'; dlerror: libcusolver.so.10.0: cannot open shared object file: No such file or directory
+2020-10-16 22:26:45.031649: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcusparse.so.10.0'; dlerror: libcusparse.so.10.0: cannot open shared object file: No such file or directory
+2020-10-16 22:26:45.033449: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-10-16 22:26:45.033458: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1641] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+2020-10-16 22:26:45.033692: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-10-16 22:26:45.037412: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3892705000 Hz
+2020-10-16 22:26:45.037810: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x560c1cb48cc0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-10-16 22:26:45.037826: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-10-16 22:26:45.212216: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-10-16 22:26:45.212659: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x560c1cb389d0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2020-10-16 22:26:45.212668: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): GeForce GTX 1650, Compute Capability 7.5
+2020-10-16 22:26:45.212720: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-16 22:26:45.212725: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      
+WARNING:tensorflow:From ./src/run_tensorfi_model_injection.py:31: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+DEBUG:root:Done setting logLevel to 10
+INFO:root:Initializing the injector
+/home/phoebe/capstone/PilotNet/TensorFI/fiConfig.py:269: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  params = yaml.load(pStream)
+INFO:root:Modifying graph in session 
+WARNING:tensorflow:From /home/phoebe/capstone/PilotNet/TensorFI/modifyGraph.py:44: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+WARNING:tensorflow:From /home/phoebe/capstone/PilotNet/TensorFI/modifyGraph.py:44: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+    
+INFO:root:Done modification of graph
+INFO:root:Initializing the fault injection parameters
+DEBUG:root:Initialized config file : FIConfig: {
+	faultTypeScalar : None
+	faultTypeTensor : bitFlip-element
+	injectMap : {<Ops.BIASADD: 'BIASADD'>: 0.5}
+	faultSeed : None
+	skipCount : 0
+ }
+INFO:root:Initializing the fault log
+INFO:root:Performing monkey patching
+INFO:root:Done with init
+INFO:root:Turning off injections
+INFO:root:No injections: Calling oldRun on Tensor("Mul:0", shape=(?, 1), dtype=float32)
+INFO:root:Turning on injections
+INFO:root:Calling newRun PilotNet runCount = 1
+INFO:root:Tensor("Mul:0", shape=(?, 1), dtype=float32) is not iterable
+DEBUG:root:TensorList = [<tf.Tensor 'Mul:0' shape=(?, 1) dtype=float32>]
+DEBUG:root:Tensor = Mul:0
+DEBUG:root:fiTensor = Tensor("fi_Mul:0", dtype=float32)
+DEBUG:root:Calling oldRun on fi_Mul:0
+DEBUG:root:Calling Operator Identity 111 
+DEBUG:root:Calling Operator Identity 111 
+DEBUG:root:Calling Operator Identity 111 
+DEBUG:root:Calling Operator Identity 111 
+DEBUG:root:Calling Operator Identity 111 
+DEBUG:root:Calling Operator Identity 111 
+DEBUG:root:Calling Operator Identity 111 
+DEBUG:root:Calling Operator Identity 111 
+DEBUG:root:Calling Operator Identity 111 
+DEBUG:root:Calling Operator Identity 111 
+DEBUG:root:Calling Operator Sub  
+DEBUG:root:Calling Operator Identity 111 
+DEBUG:root:Calling Operator Identity 111 
+DEBUG:root:Calling Operator Identity 111 
+DEBUG:root:Calling Operator Identity 111 
+DEBUG:root:Calling Operator Identity 111 
+DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
+DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
+DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
+DEBUG:root:Calling Operator Identity 111 
+DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
+DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
+DEBUG:root:Calling Operator Identity 111 
+DEBUG:root:Calling Operator Identity 111 
+DEBUG:root:Calling Operator Identity 111 
+DEBUG:root:Calling Operator Identity 111 
+DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
+DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
+DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
+DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
+DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
+DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
+DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
+DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
+DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
+DEBUG:root:Calling Operator Sub  
+DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
+DEBUG:root:Calling Operator Sub  
+DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
+DEBUG:root:Calling Operator Sub  
+DEBUG:root:Calling Operator Sub  
+DEBUG:root:Calling Operator Sub  
+DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
+DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
+DEBUG:root:Calling Operator Sub  
+DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
+DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
+DEBUG:root:Calling Operator Sub  
+DEBUG:root:	Checking if operation Ops.SUB is chosen for injection
+DEBUG:root:	Checking if operation Ops.SUB is chosen for injection
+DEBUG:root:	Checking if operation Ops.SUB is chosen for injection
+DEBUG:root:	Checking if operation Ops.SUB is chosen for injection
+DEBUG:root:	Checking if operation Ops.SUB is chosen for injection
+DEBUG:root:	Checking if operation Ops.SUB is chosen for injection
+DEBUG:root:Calling Operator conv2D  
+DEBUG:root:	Checking if operation Ops.SUB is chosen for injection
+DEBUG:root:	Checking if operation Ops.SUB is chosen for injection
+DEBUG:root:Calling Operator Sub  
+DEBUG:root:Calling Operator Sub  
+DEBUG:root:Calling Operator Sub  
+DEBUG:root:Calling Operator Sub  
+DEBUG:root:	Checking if operation Ops.SUB is chosen for injection
+DEBUG:root:	Checking if operation Ops.SUB is chosen for injection
+DEBUG:root:	Checking if operation Ops.SUB is chosen for injection
+DEBUG:root:	Checking if operation Ops.SUB is chosen for injection
+DEBUG:root:Calling Operator Log  
+DEBUG:root:Calling Operator Log  
+DEBUG:root:Calling Operator Log  
+DEBUG:root:Calling Operator Log  
+DEBUG:root:	Checking if operation Ops.REALDIV is chosen for injection
+DEBUG:root:	Checking if operation Ops.REALDIV is chosen for injection
+DEBUG:root:	Checking if operation Ops.REALDIV is chosen for injection
+DEBUG:root:	Checking if operation Ops.REALDIV is chosen for injection
+2020-10-16 22:26:45.416007: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-16 22:26:45.416038: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      
+DEBUG:root:	Checking if operation Ops.CONV2D is chosen for injection
+ERROR:root:Encountered exception pyfunc_8 returns 2 values, but expects to see 1 values.
+	 [[node fi_add (defined at /home/phoebe/.local/virtualenvs/tensorfi3/lib/python2.7/site-packages/tensorflow_core/python/framework/ops.py:1748) ]]
+
+Original stack trace for u'fi_add':
+  File "./src/run_tensorfi_model_injection.py", line 41, in <module>
+    fi = ti.TensorFI(sess, logLevel = logging.DEBUG, name = "PilotNet", disableInjections=True)
+  File "/home/phoebe/capstone/PilotNet/TensorFI/tensorFI.py", line 194, in __init__
+    self.fiMap = mg.modifyNodes(graph, fiPrefix)
+  File "/home/phoebe/capstone/PilotNet/TensorFI/modifyGraph.py", line 107, in modifyNodes
+    newOp = createFIFunc(op.type, inputs, outputTypeList, name)
+  File "/home/phoebe/capstone/PilotNet/TensorFI/modifyGraph.py", line 44, in createFIFunc
+    res = tf.py_func(fiFunc, inputs, outputTypes, name = name)
+  File "/home/phoebe/.local/virtualenvs/tensorfi3/lib/python2.7/site-packages/tensorflow_core/python/util/deprecation.py", line 324, in new_func
+    return func(*args, **kwargs)
+  File "/home/phoebe/.local/virtualenvs/tensorfi3/lib/python2.7/site-packages/tensorflow_core/python/ops/script_ops.py", line 513, in py_func
+    return py_func_common(func, inp, Tout, stateful, name=name)
+  File "/home/phoebe/.local/virtualenvs/tensorfi3/lib/python2.7/site-packages/tensorflow_core/python/ops/script_ops.py", line 495, in py_func_common
+    func=func, inp=inp, Tout=Tout, stateful=stateful, eager=False, name=name)
+  File "/home/phoebe/.local/virtualenvs/tensorfi3/lib/python2.7/site-packages/tensorflow_core/python/ops/script_ops.py", line 318, in _internal_py_func
+    input=inp, token=token, Tout=Tout, name=name)
+  File "/home/phoebe/.local/virtualenvs/tensorfi3/lib/python2.7/site-packages/tensorflow_core/python/ops/gen_script_ops.py", line 170, in py_func
+    "PyFunc", input=input, token=token, Tout=Tout, name=name)
+  File "/home/phoebe/.local/virtualenvs/tensorfi3/lib/python2.7/site-packages/tensorflow_core/python/framework/op_def_library.py", line 794, in _apply_op_helper
+    op_def=op_def)
+  File "/home/phoebe/.local/virtualenvs/tensorfi3/lib/python2.7/site-packages/tensorflow_core/python/util/deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "/home/phoebe/.local/virtualenvs/tensorfi3/lib/python2.7/site-packages/tensorflow_core/python/framework/ops.py", line 3357, in create_op
+    attrs, op_def, compute_device)
+  File "/home/phoebe/.local/virtualenvs/tensorfi3/lib/python2.7/site-packages/tensorflow_core/python/framework/ops.py", line 3426, in _create_op_internal
+    op_def=op_def)
+  File "/home/phoebe/.local/virtualenvs/tensorfi3/lib/python2.7/site-packages/tensorflow_core/python/framework/ops.py", line 1748, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+ERROR:root:Unable to execute run on Tensor("fi_Mul:0", dtype=float32)
+INFO:root:Done with newRun PilotNet
+Total operations = 266
+Input tensor = Tensor("Mul:0", shape=(?, 1), dtype=float32)
+golden steering = -2.9350321778710904
+predicted steering = None
+(0, 1.0)

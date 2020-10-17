@@ -80,12 +80,15 @@ class TensorFI:
 			results = []
 			logging.debug("TensorList = " + str(tensorList))
 			for tensor in tensorList:
+				logging.debug("Tensor = " + str(tensor.name))
+
 				# If we have replaced it with a FI function during our traversal
-				# logging.debug("Looking up " +  str(tensor.name) + " in fiMap " + fiMap)
 				if self.fiMap.has_key(tensor):
 					fiTensor = self.fiMap[ tensor ]	 
 				else:
 					fiTensor = tensor
+
+				logging.debug("fiTensor = " + str(fiTensor))
 				logging.debug("Calling oldRun on " +  str(fiTensor.name))
 				# logging.debug("feed_dict = " + str(feed_dict))
 				
@@ -186,13 +189,15 @@ class TensorFI:
 		# Modify the entire graph to insert the FI nodes - store in fiMap
 		logging.info("Modifying graph in session " + s.sess_str)
 		graph = s.graph
+		#self.printGraph()
+		#logging.info("TESTING-----------------------------")
 		self.fiMap = mg.modifyNodes(graph, fiPrefix)
 		logging.info("Done modification of graph")
 		#self.printInjectMap()	
 
 		# Configure the fault injection parameters for the injection functions	
 		# fiConf is a global variable as it needs to be accessible to the FI functions
-		logging.info("Initializing the fault injection parameters")
+		logging.info("Initializing the fault injection parameters")		
 		initFIConfig(fiParams)
 
 		# Initialize the default fault log - this may be overridden by the launch method later
@@ -309,6 +314,8 @@ class TensorFI:
 	def pLaunch(self, numberOfInjections, numberOfProcesses, computeDiff, collectStatsList, parallel = True, 
 			useProcesses = False, timeout = None):
 		"Launches the fault injection runs in parallel using either Threads or Processes"
+		
+		logging.info("pLaunch is called")
 
 		# Fist, calculate how many faults to inject in each process
 		numInjectionsPerProcess = int( floor( numberOfInjections / numberOfProcesses ) )

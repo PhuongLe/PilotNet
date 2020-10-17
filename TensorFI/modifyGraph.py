@@ -7,7 +7,16 @@ import numpy as np
 
 def createFIFunc(opType, inputs, outputTypes, name):
 	"Create a tensorflow operation representing a fault injection node"
-	# print "\nCreating FIfunc with ", opType, inputs, outputTypes, name
+	strInput = ""
+	for input in inputs:
+		strInput += str(input)
+	
+	strOutput = ""
+	for output in outputTypes:
+		strOutput += str(output)
+		
+	#print("Creating FIfunc with " + opType + " name = " + name + " input = " + strInput+ " output = " + strOutput)
+	#print("Creating FIfunc with " + opType + " name = " + name)
 
 	fiFunc = None
 
@@ -30,7 +39,8 @@ def createFIFunc(opType, inputs, outputTypes, name):
 	if fiFunc == None: 
 		raise ValueError("Unknown operation : " + str(opType))	
 
-	# Create a new TensorFlow operator with the corresponding fault injection function
+	# Create a new TensorFlow operator with the corresponding fault injection function\
+	#print("TESTING...fiFunc:{0}", fiFunc)
 	res = tf.py_func(fiFunc, inputs, outputTypes, name = name) 
 
 	#print "NewOp = ", res
@@ -55,10 +65,10 @@ def modifyNodes(g, prefix):
 
 	fiMap = {} # Keeps track of the mapping between the FI node inserted and the original ones
 
+	print("Total operations = " + str(len(ops)))
 
 	# Iterate over all the nodes in the TensorFlow graph
 	for op in ops:
-		# print("Modifying: " + pg.getOperation(op) )
 		# Gather all the inputs in a list, replacing them with those from fiMap
 		inputs = []
 		for input in  op.inputs:
@@ -79,26 +89,26 @@ def modifyNodes(g, prefix):
 			inputs.append( np.asarray(op.node_def.attr['ksize'].list.i[:]) )
 			inputs.append( np.asarray(op.node_def.attr['strides'].list.i[:]) )
 			inputs.append( str(op.node_def.attr['padding'].s) ) 
-				
 
 		# Create a new operation by wrapping debugPrint function and setting its inputs to op.inputs
 		# Do this while preserving the control dependendencies of the original
 		with g.control_dependencies(op.control_inputs):
 			name = prefix + op.name
 
-		        # If operation is not one of the excluded operations for fault injections
-                        if not excludeOps(op):	
-
+			# If operation is not one of the excluded operations for fault injections
+			if not excludeOps(op):	
 				# Find the output types of all the outputs of op	 		
 				outputTypeList = []
+
 				for output in op.outputs:
 					outputTypeList.append(output.dtype)
-
+				
 				# Create a new fault injection operation with the same inputs and outputs
 				newOp = createFIFunc(op.type, inputs, outputTypeList, name)
 
 				# Add newOp's output to the fiMap hashtable for each output of the current node
 				# This will be used later to replace downstream operations that depend on it
+				#print("TESTING output = " + str(len(op.outputs)))
 				for i in range(0, len(op.outputs)):
 					output = op.outputs[i]
 					fiMap[output] = newOp[i]

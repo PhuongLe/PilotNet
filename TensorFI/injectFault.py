@@ -15,8 +15,8 @@ from sklearn.utils.extmath import softmax
 # global variable to determine fine grained levels of logging
 # WARNING: Setting these to True may generate a lot of log data
 
-logReturn = True	# log return values of functions	
-logArgs = True		# log arguments of operators
+logReturn = False	# log return values of functions	
+logArgs = False		# log arguments of operators
 logInjection = True	# log fault injection and checking
 
 # This is the initialization function for the config file 
@@ -170,7 +170,7 @@ def condPerturb(op, res):
 	if fiConf.isSelected(op): 
 		count = count + 1	# If it's selected, then update the execution count
 
-		if logInjection: logging.debug("\tOperation " + str(op) + " is chosen for injection")
+		if logInjection: logging.debug("\t TESTING ... Operation " + str(op) + " is chosen for injection")
 		
 		# Enter the op and count in the faultLog - as we won't have access to it later
 		# NOTE: This is not actually written to the logFIle till faultLog.commit is called
@@ -340,7 +340,7 @@ def injectFaultAssign(a, b):
 
 def injectFaultIdentity(a):
 	"Inject a fault in the identitiy operation"	
-	logging.debug("Calling Operator Identity " + getArgs(a))
+	logging.debug("Calling Operator Identity 111" + getArgs(a))
 	res = a
 	res = condPerturb(Ops.IDENTITY, res)
 	if logReturn: logging.debug("\tReturning from Identity " + str(res) )
@@ -365,6 +365,7 @@ def injectFaultSub(a, b):
 	return res	
 
 def injectFaultMul(a, b):
+	print("Okay, here you are")
 	"Function to call injectFault on Mul nodes"
 	logging.debug("Calling Operator Mul " + getArgs(a, b))
 	res = a * b
@@ -1082,14 +1083,14 @@ def injectFaultSqueeze(a):
 def injectFaultGeneric(*inputs):
 	"Generic Function to call fault injection on each input and zero it out"
 	outputs = []
-	logging.debug("Calling generic fiFunc on " + str(inputs))
+	#logging.debug("Calling generic fiFunc on " + str(inputs))
 	# Perturb the input and add it to the outpus
 	# FIXME: Should we NOT actually do the operation as well ??
 	# For now, we don't do any injection at all at this function
 
 	for input in inputs:
 		outputs.append( input )
-	if logReturn: logging.debug("\tReturning " + str(outputs))
+	#if logReturn: logging.debug("\tReturning " + str(outputs))
 	return outputs
 
 

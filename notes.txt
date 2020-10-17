@@ -3,3 +3,12 @@ export CARLA_ROOT=/opt/carla-simulator/
 * export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla/dist/carla-<VERSION>.egg:${CARLA_ROOT}/PythonAPI/carla/agents:${CARLA_ROOT}/PythonAPI/carla
 export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla/dist/carla-0.9.9-py2.7-linux-x86_64.egg:${CARLA_ROOT}/PythonAPI/carla/agents:${CARLA_ROOT}/PythonAPI/carla
 
+
+virtualenv package: /home/phoebe/.local/virtualenvs/tensorfi3/lib/python2.7/site-packages
+
+
+export TENSORFI
+export PYTHONPATH=$PYTHONPATH:/home/phoebe/capstone/PilotNet:${CARLA_ROOT}/PythonAPI/carla/dist/carla-0.9.9-py2.7-linux-x86_64.egg:${CARLA_ROOT}/PythonAPI/carla/agents:${CARLA_ROOT}/PythonAPI/carla
+
+python -m compileall tensorFI.py
+./scripts/demo.sh -tensorfi 2>&1 | tee log.txt

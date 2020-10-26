@@ -791,7 +791,7 @@ def injectFaultELU(a):
 def injectFaultRandomUniform(a):
 	"Function to call injectFault on Random Uniform"
 	logging.debug("Calling Operator RandomUniform" + getArgs(a))
-	ru = tf.random.uniform(a)
+	ru = tf.random_uniform(a)
 	with tf.Session() as sess:
 		res = ru.eval()
 	res = condPerturb(Ops.RANDOM_UNIFORM, res)
@@ -1156,7 +1156,7 @@ opTable = {
 			"RandomUniform" : injectFaultRandomUniform,
 			"RandomUniformInt" : injectFaultRandomUniformInt,
 			"RandomStandardNormal" : injectFaultRandomStandardNormal,
-			"Floor" : injectFaultFloor,
+			#"Floor" : injectFaultFloor,
 			"Rsqrt" : injectFaultRsqrt,
 			"Log" : injectFaultLog,
 			"RefSwitch" : injectFaultRefSwitch,

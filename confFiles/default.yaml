@@ -30,7 +30,7 @@ Ops:
 #  - SOFT-MAX = 1.0
 # - DIV = 0.0 # This does not exist - and should be ignored (Test)
 # - SUB = 0.5 # This should raise an exception
-- BIASADD = 0.5
+#- BIASADD = 0.5
 
 # How many times the set of above operations should be skipped before injection
 # SkipCount: 1

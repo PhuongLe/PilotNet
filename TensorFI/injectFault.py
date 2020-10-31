@@ -248,6 +248,9 @@ def condPerturb(op, res):
 		# Done with if count
 
 	# Done with if isSelected
+	
+	if logInjection: logging.debug("\t TESTING ... Operation " + str(op) + " is NOT chosen for injection")
+
 	return res
 
 # End of condPerturb
@@ -340,7 +343,7 @@ def injectFaultAssign(a, b):
 
 def injectFaultIdentity(a):
 	"Inject a fault in the identitiy operation"	
-	logging.debug("Calling Operator Identity 111" + getArgs(a))
+	logging.debug("Calling Operator Identity" + getArgs(a))
 	res = a
 	res = condPerturb(Ops.IDENTITY, res)
 	if logReturn: logging.debug("\tReturning from Identity " + str(res) )

@@ -368,7 +368,6 @@ def injectFaultSub(a, b):
 	return res	
 
 def injectFaultMul(a, b):
-	print("Okay, here you are")
 	"Function to call injectFault on Mul nodes"
 	logging.debug("Calling Operator Mul " + getArgs(a, b))
 	res = a * b

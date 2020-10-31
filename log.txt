@@ -1,16 +1,16 @@
 RuntimeError: module compiled against API version 0xc but this version of numpy is 0xb
 RuntimeError: module compiled against API version 0xc but this version of numpy is 0xb
-2020-10-31 02:23:58.340025: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2020-10-31 02:23:58.541247: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2020-10-31 02:23:58.541519: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
+2020-10-31 02:55:25.625735: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-10-31 02:55:25.838491: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-10-31 02:55:25.838788: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1405] Found device 0 with properties: 
 name: GeForce GTX 1650 major: 7 minor: 5 memoryClockRate(GHz): 1.74
 pciBusID: 0000:0c:00.0
 totalMemory: 3.82GiB freeMemory: 3.41GiB
-2020-10-31 02:23:58.541535: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:58.740176: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:58.740216: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:58.740221: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:58.740300: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:25.838808: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:26.040237: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:26.040275: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:26.040280: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:26.040373: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:Done setting logLevel to 10
 INFO:root:Initializing the injector
 /home/phoebe/capstone/PilotNet/TensorFI/fiConfig.py:269: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
@@ -43,13 +43,6 @@ DEBUG:root:Calling Operator Identity
 DEBUG:root:Calling Operator Identity 
 DEBUG:root:Calling Operator Identity 
 DEBUG:root:Calling Operator Identity 
-DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
-DEBUG:root:Calling Operator Identity 
-DEBUG:root:Calling Operator Identity 
-DEBUG:root:Calling Operator Identity 
-DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
-DEBUG:root:Calling Operator Identity 
-DEBUG:root:Calling Operator Identity 
 DEBUG:root:Calling Operator Identity 
 DEBUG:root:Calling Operator Identity 
 DEBUG:root:Calling Operator Identity 
@@ -57,203 +50,210 @@ DEBUG:root:Calling Operator Identity
 DEBUG:root:Calling Operator Identity 
 DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
 DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
-DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
+DEBUG:root:Calling Operator Identity 
+DEBUG:root:Calling Operator Identity 
+DEBUG:root:Calling Operator Identity 
+DEBUG:root:Calling Operator Identity 
+DEBUG:root:Calling Operator Identity 
 DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
 DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
 DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
 DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
-DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
-DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
 DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
 DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
 DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
 DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
 DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
+DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
+DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
+DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
+DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
 DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
 DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
-DEBUG:root:Calling Operator conv2D  
+DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
+DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
+DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
 DEBUG:root:Calling Operator Sub  
-DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
-DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
-DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
-DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
-DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
 DEBUG:root:Calling Operator Sub  
+DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
+DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
+DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
 DEBUG:root:Calling Operator Identity 
 DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
-DEBUG:root:Calling Operator Sub  
+DEBUG:root:Calling Operator Identity 
 DEBUG:root:Calling Operator Sub  
 DEBUG:root:Calling Operator Identity 
 DEBUG:root:Calling Operator Identity 
-DEBUG:root:Calling Operator Identity 
+DEBUG:root:Calling Operator Sub  
 DEBUG:root:	Checking if operation Ops.SUB is chosen for injection
 DEBUG:root:	Checking if operation Ops.SUB is chosen for injection
+DEBUG:root:Calling Operator conv2D  
+DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
 DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
 DEBUG:root:	Checking if operation Ops.SUB is chosen for injection
+DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
+DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
 DEBUG:root:	Checking if operation Ops.SUB is chosen for injection
-DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
-DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
-DEBUG:root:	Checking if operation Ops.IDENTITY is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.SUB is NOT chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.SUB is NOT chosen for injection
-2020-10-31 02:23:59.618376: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
 DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
-2020-10-31 02:23:59.618423: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.618439: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.SUB is NOT chosen for injection
-2020-10-31 02:23:59.618453: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
+DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.SUB is NOT chosen for injection
-2020-10-31 02:23:59.618546: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
-DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
-DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
-DEBUG:root:	 TESTING ... Operation Ops.IDENTITY is NOT chosen for injection
+2020-10-31 02:55:26.939648: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:26.939693: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:26.939704: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:26.939710: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:26.939797: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.CONV2D is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.CONV2D is NOT chosen for injection
 DEBUG:root:Calling Operator Add  
-2020-10-31 02:23:59.626348: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.626386: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.626401: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.626413: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.626498: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:26.946463: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:26.946507: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:26.946517: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:26.946525: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:26.946610: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.ADD is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.ADD is NOT chosen for injection
 DEBUG:root:Calling Operator RelU  
-2020-10-31 02:23:59.632069: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.632106: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.632117: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.632125: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.632198: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:26.950850: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:26.950886: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:26.950895: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:26.950901: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:26.950977: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.RELU is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.RELU is NOT chosen for injection
 DEBUG:root:Calling Operator conv2D  
-2020-10-31 02:23:59.636054: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.636072: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.636076: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.636079: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.636113: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:26.955454: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:26.955499: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:26.955507: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:26.955512: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:26.955590: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.CONV2D is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.CONV2D is NOT chosen for injection
 DEBUG:root:Calling Operator Add  
-2020-10-31 02:23:59.639141: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.639159: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.639163: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.639167: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.639200: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:26.960036: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:26.960080: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:26.960093: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:26.960101: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:26.960191: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.ADD is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.ADD is NOT chosen for injection
 DEBUG:root:Calling Operator RelU  
-2020-10-31 02:23:59.642574: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.642602: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.642613: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.642622: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.642677: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:26.963926: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:26.963959: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:26.963969: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:26.963980: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:26.964049: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.RELU is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.RELU is NOT chosen for injection
 DEBUG:root:Calling Operator conv2D  
-2020-10-31 02:23:59.647674: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.647715: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.647727: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.647737: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.647820: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:26.968575: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:26.968608: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:26.968619: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:26.968631: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:26.968699: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.CONV2D is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.CONV2D is NOT chosen for injection
 DEBUG:root:Calling Operator Add  
-2020-10-31 02:23:59.653224: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.653276: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.653288: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.653296: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.653387: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:26.972248: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:26.972270: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:26.972275: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:26.972278: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:26.972323: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.ADD is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.ADD is NOT chosen for injection
 DEBUG:root:Calling Operator RelU  
-2020-10-31 02:23:59.656993: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.657024: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.657032: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.657038: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.657093: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:26.974635: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:26.974662: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:26.974666: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:26.974670: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:26.974719: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.RELU is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.RELU is NOT chosen for injection
 DEBUG:root:Calling Operator conv2D  
-2020-10-31 02:23:59.661241: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.661275: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.661281: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.661288: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.661354: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:26.979021: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:26.979066: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:26.979075: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:26.979084: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:26.979153: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.CONV2D is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.CONV2D is NOT chosen for injection
 DEBUG:root:Calling Operator Add  
-2020-10-31 02:23:59.665016: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.665042: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.665046: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.665050: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.665095: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:26.983405: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:26.983440: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:26.983449: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:26.983456: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:26.983518: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.ADD is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.ADD is NOT chosen for injection
 DEBUG:root:Calling Operator RelU  
-2020-10-31 02:23:59.667244: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.667265: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.667271: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.667274: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.667313: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:26.986726: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:26.986745: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:26.986749: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:26.986752: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:26.986787: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.RELU is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.RELU is NOT chosen for injection
 DEBUG:root:Calling Operator conv2D  
-2020-10-31 02:23:59.671022: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.671056: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.671065: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.671070: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.671127: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:26.990201: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:26.990232: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:26.990241: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:26.990247: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:26.990302: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.CONV2D is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.CONV2D is NOT chosen for injection
 DEBUG:root:Calling Operator Add  
-2020-10-31 02:23:59.674640: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.674670: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.674678: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.674684: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.674737: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:26.993123: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:26.993143: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:26.993147: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:26.993150: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:26.993187: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.ADD is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.ADD is NOT chosen for injection
 DEBUG:root:Calling Operator RelU  
-2020-10-31 02:23:59.677669: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.677701: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.677710: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.677717: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.677774: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:26.995733: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:26.995759: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:26.995766: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:26.995771: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:26.995823: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.RELU is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.RELU is NOT chosen for injection
 DEBUG:root:Calling Operator Reshape  
 DEBUG:root:	Checking if operation Ops.RESHAPE is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.RESHAPE is NOT chosen for injection
 DEBUG:root:Calling Operator MatMul  
-2020-10-31 02:23:59.687809: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.687849: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.687854: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.687859: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.687930: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:27.004627: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:27.004673: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:27.004679: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:27.004685: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:27.004756: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.MATMUL is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.MATMUL is NOT chosen for injection
 DEBUG:root:Calling Operator Add  
-2020-10-31 02:23:59.692788: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.692824: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.692832: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.692835: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.692889: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:27.009736: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:27.009764: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:27.009770: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:27.009773: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:27.009824: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.ADD is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.ADD is NOT chosen for injection
 DEBUG:root:Calling Operator RelU  
-2020-10-31 02:23:59.695146: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.695165: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.695171: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.695174: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.695213: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:27.011997: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:27.012015: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:27.012019: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:27.012022: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:27.012057: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.RELU is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.RELU is NOT chosen for injection
 DEBUG:root:Calling Operator Log  
@@ -263,57 +263,57 @@ DEBUG:root:	Checking if operation Ops.SHAPE is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.REALDIV is NOT chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.SHAPE is NOT chosen for injection
 DEBUG:root:Calling Operator RandomUniform 
-2020-10-31 02:23:59.701458: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.701509: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.701516: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.701521: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.701601: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:27.018119: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:27.018160: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:27.018173: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:27.018184: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:27.018261: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.RANDOM_UNIFORM is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.RANDOM_UNIFORM is NOT chosen for injection
 DEBUG:root:Calling Operator Mul  
 DEBUG:root:	Checking if operation Ops.MUL is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.MUL is NOT chosen for injection
 DEBUG:root:Calling Operator Add  
-2020-10-31 02:23:59.706335: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.706364: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.706371: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.706376: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.706433: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:27.023407: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:27.023445: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:27.023452: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:27.023458: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:27.023532: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.ADD is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.ADD is NOT chosen for injection
 DEBUG:root:Calling Operator Add  
-2020-10-31 02:23:59.710634: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.710656: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.710660: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.710663: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.710700: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:27.027646: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:27.027691: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:27.027704: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:27.027715: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:27.027796: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.ADD is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.ADD is NOT chosen for injection
 DEBUG:root:Calling Operator Mul  
 DEBUG:root:	Checking if operation Ops.MUL is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.MUL is NOT chosen for injection
 DEBUG:root:Calling Operator MatMul  
-2020-10-31 02:23:59.713959: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.713978: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.713982: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.713986: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.714024: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:27.033743: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:27.033781: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:27.033791: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:27.033797: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:27.033860: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.MATMUL is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.MATMUL is NOT chosen for injection
 DEBUG:root:Calling Operator Add  
-2020-10-31 02:23:59.717640: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.717673: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.717684: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.717693: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.717755: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:27.037434: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:27.037463: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:27.037471: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:27.037476: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:27.037528: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.ADD is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.ADD is NOT chosen for injection
 DEBUG:root:Calling Operator RelU  
-2020-10-31 02:23:59.721535: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.721573: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.721588: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.721602: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.721680: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:27.040688: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:27.040719: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:27.040729: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:27.040736: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:27.040794: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.RELU is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.RELU is NOT chosen for injection
 DEBUG:root:Calling Operator Shape  
@@ -323,57 +323,57 @@ DEBUG:root:	Checking if operation Ops.REALDIV is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.SHAPE is NOT chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.REALDIV is NOT chosen for injection
 DEBUG:root:Calling Operator RandomUniform 
-2020-10-31 02:23:59.729331: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.729357: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.729364: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.729369: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.729423: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:27.045303: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:27.045324: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:27.045328: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:27.045331: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:27.045374: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.RANDOM_UNIFORM is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.RANDOM_UNIFORM is NOT chosen for injection
 DEBUG:root:Calling Operator Mul  
 DEBUG:root:	Checking if operation Ops.MUL is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.MUL is NOT chosen for injection
 DEBUG:root:Calling Operator Add  
-2020-10-31 02:23:59.733550: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.733577: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.733585: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.733590: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.733640: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:27.049136: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:27.049170: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:27.049181: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:27.049190: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:27.049256: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.ADD is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.ADD is NOT chosen for injection
 DEBUG:root:Calling Operator Add  
-2020-10-31 02:23:59.736685: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.736711: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.736721: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.736730: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.736784: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:27.052712: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:27.052743: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:27.052753: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:27.052761: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:27.052818: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.ADD is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.ADD is NOT chosen for injection
 DEBUG:root:Calling Operator Mul  
 DEBUG:root:	Checking if operation Ops.MUL is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.MUL is NOT chosen for injection
 DEBUG:root:Calling Operator MatMul  
-2020-10-31 02:23:59.741160: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.741207: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.741218: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.741228: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.741407: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:27.056465: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:27.056507: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:27.056517: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:27.056526: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:27.056583: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.MATMUL is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.MATMUL is NOT chosen for injection
 DEBUG:root:Calling Operator Add  
-2020-10-31 02:23:59.745001: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.745029: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.745037: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.745043: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.745093: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:27.059595: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:27.059613: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:27.059619: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:27.059624: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:27.059661: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.ADD is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.ADD is NOT chosen for injection
 DEBUG:root:Calling Operator RelU  
-2020-10-31 02:23:59.748143: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.748175: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.748183: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.748191: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.748249: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:27.063409: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:27.063455: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:27.063466: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:27.063473: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:27.063544: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.RELU is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.RELU is NOT chosen for injection
 DEBUG:root:Calling Operator Shape  
@@ -383,57 +383,57 @@ DEBUG:root:	Checking if operation Ops.REALDIV is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.SHAPE is NOT chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.REALDIV is NOT chosen for injection
 DEBUG:root:Calling Operator RandomUniform 
-2020-10-31 02:23:59.755194: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.755235: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.755245: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.755252: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.755325: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:27.070217: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:27.070265: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:27.070275: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:27.070285: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:27.070370: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.RANDOM_UNIFORM is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.RANDOM_UNIFORM is NOT chosen for injection
 DEBUG:root:Calling Operator Mul  
 DEBUG:root:	Checking if operation Ops.MUL is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.MUL is NOT chosen for injection
 DEBUG:root:Calling Operator Add  
-2020-10-31 02:23:59.759911: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.759945: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.759954: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.759961: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.760018: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:27.077688: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:27.077720: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:27.077724: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:27.077727: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:27.077772: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.ADD is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.ADD is NOT chosen for injection
 DEBUG:root:Calling Operator Add  
-2020-10-31 02:23:59.763151: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.763182: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.763189: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.763195: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.763248: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:27.081455: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:27.081491: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:27.081504: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:27.081516: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:27.081588: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.ADD is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.ADD is NOT chosen for injection
 DEBUG:root:Calling Operator Mul  
 DEBUG:root:	Checking if operation Ops.MUL is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.MUL is NOT chosen for injection
 DEBUG:root:Calling Operator MatMul  
-2020-10-31 02:23:59.766731: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.766756: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.766764: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.766769: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.766817: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:27.085548: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:27.085570: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:27.085575: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:27.085579: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:27.085621: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.MATMUL is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.MATMUL is NOT chosen for injection
 DEBUG:root:Calling Operator Add  
-2020-10-31 02:23:59.769486: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.769509: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.769513: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.769517: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.769555: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:27.089177: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:27.089215: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:27.089225: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:27.089232: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:27.089292: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.ADD is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.ADD is NOT chosen for injection
 DEBUG:root:Calling Operator RelU  
-2020-10-31 02:23:59.772569: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.772593: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.772601: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.772606: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.772651: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:27.092766: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:27.092801: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:27.092810: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:27.092817: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:27.092886: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.RELU is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.RELU is NOT chosen for injection
 DEBUG:root:Calling Operator Shape  
@@ -443,49 +443,49 @@ DEBUG:root:	Checking if operation Ops.REALDIV is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.SHAPE is NOT chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.REALDIV is NOT chosen for injection
 DEBUG:root:Calling Operator RandomUniform 
-2020-10-31 02:23:59.777302: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.777334: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.777341: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.777347: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.777400: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:27.099313: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:27.099349: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:27.099358: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:27.099364: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:27.099423: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.RANDOM_UNIFORM is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.RANDOM_UNIFORM is NOT chosen for injection
 DEBUG:root:Calling Operator Mul  
 DEBUG:root:	Checking if operation Ops.MUL is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.MUL is NOT chosen for injection
 DEBUG:root:Calling Operator Add  
-2020-10-31 02:23:59.781614: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.781645: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.781650: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.781655: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.781712: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:27.103763: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:27.103789: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:27.103797: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:27.103802: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:27.103851: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.ADD is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.ADD is NOT chosen for injection
 DEBUG:root:Calling Operator Add  
-2020-10-31 02:23:59.784741: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.784769: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.784775: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.784780: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.784827: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:27.106681: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:27.106703: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:27.106707: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:27.106710: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:27.106751: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.ADD is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.ADD is NOT chosen for injection
 DEBUG:root:Calling Operator Mul  
 DEBUG:root:	Checking if operation Ops.MUL is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.MUL is NOT chosen for injection
 DEBUG:root:Calling Operator MatMul  
-2020-10-31 02:23:59.788194: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.788220: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.788227: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.788232: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.788282: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:27.110373: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:27.110409: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:27.110417: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:27.110423: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:27.110486: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.MATMUL is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.MATMUL is NOT chosen for injection
 DEBUG:root:Calling Operator Add  
-2020-10-31 02:23:59.791629: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
-2020-10-31 02:23:59.791655: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-10-31 02:23:59.791661: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
-2020-10-31 02:23:59.791666: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
-2020-10-31 02:23:59.791710: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3105 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
+2020-10-31 02:55:27.113572: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1484] Adding visible gpu devices: 0
+2020-10-31 02:55:27.113605: I tensorflow/core/common_runtime/gpu/gpu_device.cc:965] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-10-31 02:55:27.113612: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971]      0 
+2020-10-31 02:55:27.113618: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] 0:   N 
+2020-10-31 02:55:27.113675: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1097] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3104 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:0c:00.0, compute capability: 7.5)
 DEBUG:root:	Checking if operation Ops.ADD is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.ADD is NOT chosen for injection
 DEBUG:root:Calling Operator Mul  
@@ -493,16 +493,7 @@ DEBUG:root:	Checking if operation Ops.MUL is chosen for injection
 DEBUG:root:	 TESTING ... Operation Ops.MUL is NOT chosen for injection
 INFO:root:Done with newRun PilotNet
 Total operations = 240
-Okay, here you are
-Okay, here you are
-Okay, here you are
-Okay, here you are
-Okay, here you are
-Okay, here you are
-Okay, here you are
-Okay, here you are
-Okay, here you are
 Input tensor = Tensor("Mul:0", shape=(?, 1), dtype=float32)
 golden steering = -2.93503815429
-predicted steering = -12.0262957085
+predicted steering = -13.9191870143
 (0, 1.0)

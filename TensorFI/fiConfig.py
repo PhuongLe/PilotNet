@@ -59,6 +59,7 @@ class Ops(Enum):
 	LRN = "LRN" 
 	ELU = "ELU"
 	RANDOM_UNIFORM = "RANDOM-UNIFORM"
+	FLOOR = "FLOOR"
 # End of Ops
 
 # These are the list of supported Fault types below (if you add a new type, please add it here)

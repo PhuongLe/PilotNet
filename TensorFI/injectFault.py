@@ -800,6 +800,16 @@ def injectFaultRandomUniform(a):
 	if logReturn: logging.debug("\tReturning from Random Uniform " + str(res) )
 	return res
 
+def injectFaultFloor(a):
+	"Function to call injectFault on Floor"
+	logging.debug("Calling Operator injectFaultFloor" + getArgs(a))
+	floor = tf.math.floor(a)
+	with tf.Session() as sess:
+		res = floor.eval()
+	res = condPerturb(Ops.FLOOR, res)
+	if logReturn: logging.debug("\tReturning from Floor operation " + str(res) )
+	return res
+
 # End of implemented operators
 
 
@@ -1066,12 +1076,6 @@ def injectFaultAssignAdd(a):
 	logging.debug("Calling Operator AssignAdd")
 	raise NotImplementedError("AssignAdd")
 
-def injectFaultFloor(a):
-	"Function to call injectFault on Floor"
-	# FIXME: Implement this functionality
-	logging.debug("Calling Operator Floor")
-	raise NotImplementedError("Floor")
-
 def injectFaultSqueeze(a):
 	"Function to call injectFault on Squeeze"
 	# FIXME: Implement this functionality
@@ -1158,7 +1162,7 @@ opTable = {
 			"RandomUniform" : injectFaultRandomUniform,
 			"RandomUniformInt" : injectFaultRandomUniformInt,
 			"RandomStandardNormal" : injectFaultRandomStandardNormal,
-			#"Floor" : injectFaultFloor,
+			"Floor" : injectFaultFloor,
 			"Rsqrt" : injectFaultRsqrt,
 			"Log" : injectFaultLog,
 			"RefSwitch" : injectFaultRefSwitch,

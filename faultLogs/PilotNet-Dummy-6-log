@@ -1,5 +1,50 @@
-Starting log at 2020-10-31 02:55:26.931017
+Starting log at 2020-12-18 23:24:50.500114
 
+{
+	Count : 1
+	Time : 0:00:26.816099
+	TotalInstance : 3
+	Instance : 1
+	Injected : [[ 0.          4.23466587  0.         ...,  0.          0.          2.77596331]]
+	OpName : Ops.RESHAPE
+	Original : [[ 0.          4.23466587  0.         ...,  0.          0.          2.77596331]]
+ }
+{
+	Count : 1
+	Time : 0:00:27.557173
+	TotalInstance : 3
+	Instance : 2
+	Injected : [[ 0.          4.23466587  0.         ...,  0.          0.          2.77596331]]
+	OpName : Ops.RESHAPE
+	Original : [[ 0.          4.23466587  0.         ...,  0.          0.          2.77596331]]
+ }
+{
+	Count : 1
+	Time : 0:00:31.114290
+	TotalInstance : 3
+	Instance : 3
+	Injected : [[ 0.          4.23466587  0.         ...,  0.          0.          2.77596331]]
+	OpName : Ops.RESHAPE
+	Original : [[ 0.          4.23466587  0.         ...,  0.          0.          2.77596331]]
+ }
+{
+	Count : 1
+	Time : 0:00:41.632680
+	TotalInstance : 3
+	Instance : 3
+	Injected : [[ 0.          1.45331192  0.         ...,  0.          0.          2.02764225]]
+	OpName : Ops.RESHAPE
+	Original : [[ 0.          1.45331192  0.         ...,  0.          0.          2.02764225]]
+ }
+{
+	Count : 1
+	Time : 0:00:52.734642
+	TotalInstance : 3
+	Instance : 3
+	Injected : [[ 0.          1.45331192  0.         ...,  0.          0.          2.02764225]]
+	OpName : Ops.RESHAPE
+	Original : [[ 0.          1.45331192  0.         ...,  0.          0.          2.02764225]]
+ }
 
 ---------------------------------------
 Done injections

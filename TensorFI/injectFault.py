@@ -138,7 +138,6 @@ def perturb(val):
 	if logInjection:
 		logging.debug("\tPerturbing " + str(val)  + " of type: " + str(vType) + " isScalar: " + str(isScalar) )
 
-	
 	# Check if the object is a scalar or a tensor, and call the corresponding injection function
 	if isScalar: 
 		res = fiConf.injectScalar( vType, val.copy()) 
@@ -148,6 +147,7 @@ def perturb(val):
 	# Enter an entry in the fault log that we injected a fault here
 	faultLog.updateOriginal( val )
 	faultLog.updateInjected( res )
+	#if logInjection: logging.debug("\t TESTING ... res = " + str(res))
 
 	return res
 
@@ -188,7 +188,11 @@ def condPerturb(op, res):
 				# and only perturb it only if the random no. <= the probability 
  				
 				prob = fiConf.getProbability(op)
+				#if logInjection: logging.debug("\t TESTING ... PROB = " + str(prob))
+
 				rn = np.random.random()		# random.random returns a number in [0, 1] 
+				#if logInjection: logging.debug("\t TESTING ... np = " + str(rn))
+
 				if (rn <= prob):     
 					res = perturb(res) # Perturb is called to inject the fault  
 					faultLog.commit()  # Write the log entry to the fault log 	 
@@ -200,7 +204,8 @@ def condPerturb(op, res):
 				# and generate a random number to select a random instance of the operation
 				# and only perturb it only if the current instance has been selected 
 				instance = fiConf.getInstance(op)   
-				
+				if logInjection: logging.debug("\t TESTING ... instance =  " + instance)
+
 				# You can manually specify the instance here rather than using the random instances
 				# So that you can inject fault into a target operator
 				# E.g., randInstanceMap[op] = instance of op to be injected
@@ -249,7 +254,7 @@ def condPerturb(op, res):
 
 	# Done with if isSelected
 	
-	if logInjection: logging.debug("\t TESTING ... Operation " + str(op) + " is NOT chosen for injection")
+	#if logInjection: logging.debug("\t TESTING ... Operation " + str(op) + " is NOT chosen for injection")
 
 	return res
 
@@ -352,10 +357,14 @@ def injectFaultIdentity(a):
 def injectFaultAdd(a, b):
 	"Function to call injectFault on Add nodes"
 	logging.debug("Calling Operator Add " + getArgs(a, b))
+	#if logInjection: logging.debug("\t TESTING ... Calling Operator Add " + str(a) + "," + str(b)+")")
+
 	resOp = tf.add(a, b)
 	with tf.Session() as sess:
 		res = resOp.eval()
 	res = condPerturb(Ops.ADD, res)
+	#if logInjection: logging.debug("\t TESTING ... Returning from Add = " + str(res))
+
 	if logReturn: logging.debug("\tReturning from Add " + str(res) )
 	return res	
 

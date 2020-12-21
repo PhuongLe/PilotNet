@@ -1,5 +1,86 @@
-Starting log at 2020-10-31 02:55:26.931550
+Starting log at 2020-12-18 23:24:50.501256
 
+{
+	Count : 1
+	Time : 0:00:02.865396
+	TotalInstance : 3
+	Instance : 1
+	Injected : [[ 0.          5.50169373  0.         ...,  0.          0.          3.00888515]]
+	OpName : Ops.RESHAPE
+	Original : [[ 0.          5.50169373  0.         ...,  0.          0.          3.00888515]]
+ }
+{
+	Count : 1
+	Time : 0:00:16.072718
+	TotalInstance : 3
+	Instance : 3
+	Injected : [[ 0.          5.50169373  0.         ...,  0.          0.          3.00888515]]
+	OpName : Ops.RESHAPE
+	Original : [[ 0.          5.50169373  0.         ...,  0.          0.          3.00888515]]
+ }
+{
+	Count : 1
+	Time : 0:00:20.056075
+	TotalInstance : 3
+	Instance : 3
+	Injected : [[ 0.          4.23466587  0.         ...,  0.          0.          2.77596331]]
+	OpName : Ops.RESHAPE
+	Original : [[ 0.          4.23466587  0.         ...,  0.          0.          2.77596331]]
+ }
+{
+	Count : 1
+	Time : 0:00:43.112651
+	TotalInstance : 3
+	Instance : 2
+	Injected : [[ 0.          1.45331192  0.         ...,  0.          0.          2.02764225]]
+	OpName : Ops.RESHAPE
+	Original : [[ 0.          1.45331192  0.         ...,  0.          0.          2.02764225]]
+ }
+{
+	Count : 1
+	Time : 0:00:43.487415
+	TotalInstance : 3
+	Instance : 1
+	Injected : [[ 0.          1.45331192  0.         ...,  0.          0.          2.02764225]]
+	OpName : Ops.RESHAPE
+	Original : [[ 0.          1.45331192  0.         ...,  0.          0.          2.02764225]]
+ }
+{
+	Count : 1
+	Time : 0:00:49.688857
+	TotalInstance : 3
+	Instance : 2
+	Injected : [[ 0.          1.45331192  0.         ...,  0.          0.          2.02764225]]
+	OpName : Ops.RESHAPE
+	Original : [[ 0.          1.45331192  0.         ...,  0.          0.          2.02764225]]
+ }
+{
+	Count : 1
+	Time : 0:00:56.929918
+	TotalInstance : 3
+	Instance : 1
+	Injected : [[ 0.          4.43275785  0.         ...,  0.          0.          1.33729649]]
+	OpName : Ops.RESHAPE
+	Original : [[ 0.          4.43275785  0.         ...,  0.          0.          1.33729649]]
+ }
+{
+	Count : 1
+	Time : 0:00:59.482187
+	TotalInstance : 3
+	Instance : 3
+	Injected : [[ 0.          4.43275785  0.         ...,  0.          0.          1.33729649]]
+	OpName : Ops.RESHAPE
+	Original : [[ 0.          4.43275785  0.         ...,  0.          0.          1.33729649]]
+ }
+{
+	Count : 1
+	Time : 0:01:10.019085
+	TotalInstance : 3
+	Instance : 3
+	Injected : [[ 0.          4.43275785  0.         ...,  0.          0.          1.33729649]]
+	OpName : Ops.RESHAPE
+	Original : [[ 0.          4.43275785  0.         ...,  0.          0.          1.33729649]]
+ }
 
 ---------------------------------------
 Done injections

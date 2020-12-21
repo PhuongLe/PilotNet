@@ -151,14 +151,24 @@ def bitElementScalar( dtype, val ):
 
 def bitElementTensor( dtype, val):
 	"Flip ont bit of a random element in a tensor"
+	#print("\t TESTING ...  bitElementTensor val = " + str(val))
+
 	# flatten the tensor into a vector and then restore the original shape in the end
+	
 	valShape = val.shape
+
 	val = val.flatten()
+	#print("\t TESTING ...  bitElementTensor val.flatten = " + str(val))
+
 	# select a random data item in the data space for injection
 	index = np.random.randint(low=0, high=len(val))
-	val[index] = randomBitFlip(val[index])	
-	val = val.reshape(valShape)
+	#print("\t TESTING ...  bitElementTensor index = " + str(index))
 
+	#print("\t TESTING ...  bitElementTensor val[index] = " + str(val[index]))
+	val[index] = randomBitFlip(val[index])	
+	#print("\t TESTING ...  bitElementTensor val[index] after = " + str(val[index]))
+	val = val.reshape(valShape)
+	
 	return dtype.type( val )
 
 def bitScalar( dtype, val):

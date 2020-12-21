@@ -1,0 +1,16 @@
+numOfInjection = 100
+sdcMax = 10
+index = [20,40,60,80]
+
+InjectMode: "errorRate"
+Ops:
+- MUL = 0.5
+
+Instances: 
+  - MUL = 3
+  
+# Deterministic fault seed for the injections
+Seed: 1000
+
+ScalarFaultType: None  
+TensorFaultType: Rand-element

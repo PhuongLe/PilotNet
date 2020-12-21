@@ -190,6 +190,8 @@ class FIConfig(object):
 		else:
 			faultTypeTensor = "None"
 		
+		logging.debug("\t TESTING ...  faultTypeTensor = " + faultTypeTensor)
+		
 		self.injectMode = ""
 		if fiParams.has_key(Fields.InjectMode.value):
 			self.injectMode = str(fiParams[Fields.InjectMode.value]) 

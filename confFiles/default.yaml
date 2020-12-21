@@ -2,7 +2,7 @@
 # The fields here should correspond to the Fields in fiConfig.py
 
 # Deterministic fault seed for the injections
-# Seed: 1000
+Seed: 1000
 
 # Type of fault to be injected for Scalars and Tensors
 # Allowed values are: {None, Rand, Zero, Rand-element, bitFlip-element, bitFlip-tensor}
@@ -12,8 +12,14 @@
 #   4) Rand-element - shuffle one of the data item in the output of the target op into random value
 #   5) bitFlip-element - single bit-flip over one data item in the output of the target op
 #   6) bitFlip-tensor - single bit-flip over all data items in the output of the target op 
-ScalarFaultType: None
-TensorFaultType: bitFlip-element 
+ScalarFaultType: None  
+#TensorFaultType: Rand-element
+#TensorFaultType: bitFlip-tensor
+#TensorFaultType: Rand
+TensorFaultType: bitFlip-element
+#TensorFaultType: Zero
+#TensorFaultType: None
+
 
 
 # Add the list of Operations and their probabilities here
@@ -29,11 +35,23 @@ Ops:
 # - EQUAL = 1.0
 #  - SOFT-MAX = 1.0
 # - DIV = 0.0 # This does not exist - and should be ignored (Test)
-# - SUB = 0.5 # This should raise an exception
+#- SUB = 0.5 # This should raise an exception
 #- BIASADD = 0.5
+#- MUL = 1
+#- ADD = 1
+#- IDENTITY = 0.5
+#- CONV2D = 0.5
+#- RELU = 0.5
+- RESHAPE = 0.5
+#- MATMUL = 0.5
+#- REALDIV = 0.5
+#- SHAPE = 0.5
+#- FLOOR = 0.5
+
+#-RANDOM_UNIFORM = not implemented yet
 
 # How many times the set of above operations should be skipped before injection
-# SkipCount: 1
+SkipCount: 0
 
 
 # Specify the instances of the ML operators 
@@ -45,7 +63,7 @@ Instances:
   #- RELU = 3
   #- BIASADD = 2
   #- RESHAPE = 1
-  #- ADD = 3
+  - ADD = 3
   #- MATMUL = 3 
 
 
@@ -58,4 +76,5 @@ Instances:
 # In the second and third mode, you'll need to specify the instances of all the operators in the algorithm
 
 # Allowed values: 1) "errorRate"; 2) "dynamicInstance"; 3) "oneFaultPerRun" 
-InjectMode: "errorRate"
+#InjectMode: "errorRate"
+InjectMode: "oneFaultPerRun"

@@ -6,3 +6,25 @@ cmake-build-debug/
 
 data/
 logs/
+/.vscode/*.ini
+/TensorFI/*.ini
+/confFiles/*.ini
+/*.ini
+/faultLogs/*.ini
+/readme/*.ini
+/reports/achieve/*.ini
+/reports/achieve/errorRate-MUL-bitflip-tensor/*.ini
+/reports/achieve/errorRate-MUL-rand-element/*.ini
+/reports/achieve/onefaultperrun-ADD-bitflip-tensor/*.ini
+/reports/achieve/onefaultperrun-ADD-rand-element/*.ini
+/reports/achieve/onefaultperrun-ADD/*.ini
+/reports/achieve/onefaultperrun-MUL-bitflip-tensor/*.ini
+/reports/*.ini
+/reports/figraphs/*.ini
+/reports/figraphs/png/*.ini
+/reports/graphs/*.ini
+/reports/graphs/png/*.ini
+/scripts/*.ini
+/src/*.ini
+/src/nets/*.ini
+/src/preprocess/*.ini

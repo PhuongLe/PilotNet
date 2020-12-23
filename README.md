@@ -1,178 +1,68 @@
-# _PilotNet_: End to End Learning for Self-Driving Cars
+# An experiment of Fault Injection Testing in Autonomous Vehicle
+Fault injection (FI) is an important way to access the reliability of a computer system. By injecting faults, we get to study the system’s detection and recovery mechanism which may help in building a more robust system. Through fault injection, we can artificially induce both hardware and software level faults into the system. A fault can be simulated by either hardware or software. Software-implemented Fault Injection techniques, however, are more preferable as they are low cost, controllable, and easily deployable.
+There are several software-implemented Fault Injection Tools out there that inject faults at different levels of the system from assembly code level to application’s source code level. Some of them include NF-Tape, Xception, and the GooFI of Google.
+
+In this project, we have used the **TensorFI** Fault Injection framework because it works with **TensorFlow** and our aim was to inject faults in the **PilotNet** model, an autonomous vehicle machine learning model, which also used TensorFlow.
+
+
+## _PilotNet_: End to End Learning for Self-Driving Cars
 <p align="center">
    <img src="./readme/demo.gif" width="540" alt=""/>
 </p>
 
-　　A TensorFlow implementation of this Nvidia's 
-[End to End Learning for Self-Driving Cars](https://arxiv.org/pdf/1604.07316.pdf) with some changes. And implement
-[Explaining How a Deep Neural Network Trained with End-to-End Learning Steers a Car](https://arxiv.org/abs/1704.07911).
+A TensorFlow implementation of this [Nvidia paper](https://arxiv.org/pdf/1604.07316.pdf) with some changes. 
+
+For more information about how to install and use PilotNet, please read https://github.com/Durant35/PilotNet.git
+
+## TensorFI: A fault injector for TensorFlow applications
+TensorFI is a fault injection framework that can simulate both hardware and software faults of any Machine Learning algorithms that are written in the TensorFlow framework. Unlike the other fault injection techniques that can be used within a particular application, TensorFI is able to perform FI on generic ML applications. It specializes in performing interface-level fault injection. Furthermore, it is easy to use by developers because it allows them to directly operate on TensorFlow operators and graphs.
+TensorFI works by cloning the TensorFlow graph and creating a Fault Injection graph by modifying the original and yet keeping the original intact. TensorFI provides a flexible configuration that allows developers to choose amongst different fault injection types, injection modes, and the target operators to inject these faults. The Fault Injection graph is similar to the original with the additional capability of injecting faults based on the developer’s chosen configurations. This can be illustrated visually through image 1 and 2. Figure 1 shows an example of a TensorFlow graph with 2 operators (MUL, ADD) and some tensor inputs. TensorFI clones the graph to create a fault injection graph as can be observed in figure 2. The structure of the original graph remains the same, but there is a fault configuration option injected into the output of the operators. The developer may then choose to inject faults in the Add operator by configuring the system and selecting the fault injection type to flip a bit or change the output to a new random value. 
 <p align="center">
-   <img src="./readme/PilotNet.png" width="640" alt=""/>
+   <img src="./readme/graph1.png" width="300" alt=""/>
+   <img src="./readme/graph2.png" width="300" alt=""/>
 </p>
 
-```latex
-@article{bojarski2016end,
-  title={End to end learning for self-driving cars},
-  author={Bojarski, Mariusz and Del Testa, Davide and Dworakowski, Daniel and Firner, Bernhard and Flepp, Beat and Goyal, Prasoon and Jackel, Lawrence D and Monfort, Mathew and Muller, Urs and Zhang, Jiakai and others},
-  journal={arXiv preprint arXiv:1604.07316},
-  year={2016}
-}
-
-@article{bojarski2017explaining,
-  title={Explaining how a deep neural network trained with end-to-end learning steers a car},
-  author={Bojarski, Mariusz and Yeres, Philip and Choromanska, Anna and Choromanski, Krzysztof and Firner, Bernhard and Jackel, Lawrence and Muller, Urs},
-  journal={arXiv preprint arXiv:1704.07911},
-  year={2017}
-}
-```
-
-# How to Use
-The instructions are tested on Ubuntu 16.04 with python 2.7 and tensorflow 1.0 with GPU support (CUDA 8.0 and cuDNN 5.1).
-
-## Installation
-- Clone the PilotNet repository:
-   ```bash
-   $ git clone https://github.com/Durant35/PilotNet.git
-   ```
-   We name the root directory as `$ROOT`.
-
-- Setup virtual environment using `virtualenvwrapper`.
-   ```shell
-   $ pip install virtualenvwrapper
-   # configure virtualenvwrapper
-   $ mkdir $HOME/.local/virtualenvs
-   
-   # append contents in `~/.bashrc`
-   $ sudo vim ~/.bashrc
-   
-   # always use pip/distribute
-   export VIRTUALENV_USE_DISTRIBUTE=1
-   # directory to store all virtual environment 
-   export WORKON_HOME=$HOME/.local/virtualenvs
-   if [ -e $HOME/.local/bin/virtualenvwrapper.sh ]; then
-     source $HOME/.local/bin/virtualenvwrapper.sh
-   else if [ -e /usr/local/bin/virtualenvwrapper.sh ]; then
-     source /usr/local/bin/virtualenvwrapper.sh
-   fi
-   export PIP_VIRTUALENV_BASE=$WORKON_HOME
-   export PIP_RESPECT_VIRTUALENV=true
-   
-   # enable virtualenvwrapper
-   $ source ~/.bashrc
-   # create virtual environment with python2.7 and tensorflow 1.0.0
-   $ mkvirtualenv -p /usr/bin/python2.7 python1.0.0
-   ```
-- Use pip to install required Python packages:
-   ```Shell
-   $ cd $ROOT
-   $ workon python1.0.0
-   (python1.0.0) $ pip install -r requirements.txt
-   ```
+For more information about how to install and use TensorFI, please read https://github.com/DependableSystemsLab/TensorFI
 
 ## Dataset
-　If you want to run the demo on the dataset or try some training works, download the
-[driving_dataset.zip](https://drive.google.com/file/d/0B-KJCaaF7elleG1RbzVPZWV4Tlk/view?usp=sharing) and recommend you to
-extract into the dataset folder [`./data/dataset_nvidia/`](./data/dataset_nvidia/).
+The demo training and testing dataset can be found on the folder [./data/dataset](https://github.com/PhuongLe/PilotNet/tree/master/data/datasets) 
+
+## Setup
+Our test was done with the following environment setup:
+●	Ubuntu 16.4
+●	Python 2.7
+●	TensorFlow 1.10
+
+The test can be done by following steps
+1. Install required packages as described on PilotNet's repository
+2. Install required packages as described on TensorFI's repository
+3. Train PilotNet model (or use the pre-trained model.ckpt under folder [./data/models](https://github.com/PhuongLe/PilotNet/tree/master/data/models))
+4. Run test script as belows 
 ```bash
-$ cd $ROOT/data/dataset_nvidia/
-$ wget -t https://drive.google.com/file/d/0B-KJCaaF7elleG1RbzVPZWV4Tlk/view?usp=sharing
-$ unzip driving_dataset.zip -d .
-```
-
-　This [driving_dataset.zip](https://drive.google.com/file/d/0B-KJCaaF7elleG1RbzVPZWV4Tlk/view?usp=sharing) consists of
-**images of the road ahead (`*.jpg`)** and recorded **steering wheel angles (`%.6f`)**, `data.txt` should in following
-format:
-```yaml
-    ...
-98.jpg 2.120000
-99.jpg 2.120000
-100.jpg 2.120000
-101.jpg 2.120000
-    ...
-```
-
-## Demo
-　You can run this demo directly on a live webcam feed in actual running scenario (**online**) or just **offline**, given input
-images of the road ahead.
-
-+ Run the model on the dataset.
-   ```bash
    $ cd $ROOT
-   $ workon python1.0.0
-   (python1.0.0) $ ./scripts/demo.sh -h
-   Usage: ./scripts/demo.sh [options]
-    
-   options:
-   -h, --help                show brief help
-   -model_file               model files for restoring PilotNet, default './data/model_nvidia/model.ckpt'
-   -online                   run the demo on a live webcam feed, default demo on dataset
-   -dataset_dir              dataset given input images of the road ahead, default './data/dataset_nvidia'
-   (python1.0.0) $ ./scripts/demo.sh
-   ```
-+ Run the model on a live webcam feed
-   ```bash
-   $ cd $ROOT
-   $ workon python1.0.0
-   (python1.0.0) $ ./scripts/demo.sh -online
+   $ (pilotnet-tensorfi-env) $ ./scripts/demo.sh -tensorfi
    ```
 
-## Training/Validation
-+ After downloading the dataset, you can train your own model parameters as following:
-   ```bash
-   $ cd $ROOT
-   $ workon python1.0.0
-   (python1.0.0) $ ./scripts/train.sh -h
-   Usage: ./scripts/train.sh [options]
-    
-   options:
-   -h, --help         show brief help
-   -dataset_dir       training dataset given input images of the road ahead and
-                        recorded steering wheel angles, default './data/datasets/driving_dataset'
-   -f                 force to clear old logs if exist
-   -log_dir           path for training logs, including training summaries as well as model parameters,
-                        default in './logs' and './logs/checkpoint' respectively
-   -num_epochs        the numbers of epochs for training, default train over the dataset about 30 times.
-   -batch_size        the numbers of training examples present in a single batch for every training, default 128
-   (python1.0.0) $ ./scripts/train.sh
-   ```
-   + You can run `./scripts/train.sh` to train your model from downloaded dataset following tips above. Training logs and 
-   model will be stored into [./logs](./logs) and [./logs/checkpoint](./logs/checkpoint) respectively.
-   + `-dataset_dir` can help you to specify other available dataset.
-   + You can use `-log_dir` to set another log directory, and be careful to use `-f` for log files synchronization,
-   fix `WARNING:tensorflow:Found more than one metagraph event per run. Overwriting the metagraph with the newest event.`
-   + You can use `-num_epochs` and `-batch_size` to control the training step if good at it.
+## Evaluation metrics
 
-<hr/>
+The four metrics that were used to evaluate the fault resilience of PilotNet are:
+1.	**OneFaultPerRun with fault type BitFlip-Element** - This metrics injects one fault per run wherein the output of the target operator flips one single bit of data. 
+2.	**OneFaultPerRun with fault type Rand-Element** - This metrics injects one fault per run wherein the output of the target operator is switched to a random value within the output value range [0, Output Value].
+3.	**Fault Injection Rate (0.1 to 0.5) with fault type BitFlip-Element** - This metrics injects faults at the fault injection rate between 0.1 to 0.5 wherein the output of the target operator flips one single bit of data. 
+4.	**Fault Injection Rate (0.1 to 0.5) with fault type Rand-Element** - This metrics injects faults at the fault injection rate between 0.1 to 0.5 wherein the output of the target operator is switched to a random value within the output value range [0, Output Value].
+
+The experiments were done on a list of random images and 100 fault injection trials were performed on each image's processing round. Each metric was analyzed on different operators of the PilotNet system. The percentage of SDC error rate was calculated that resulted in the output of the steering angle being 5 degrees different from the golden value. The complete report of the analysis can be accessed via the team’s GitHub Repository under the folder “report”. The results of the analysis can be observed in image 3 and 4.
+
+## Analysis
 <p align="center">
-   <img src="./readme/tensorboard.png" width="720" alt=""/>
+   <img src="./readme/report1.png" width="300" alt=""/>
+</p>
+Image 3 depicts the result of the first two metrics which inject one BitFlip-Element or Rand-Element fault in every run. The key observations from the graph are: 
+1.	The top four most sensitive operators to the faults are MUL, Add, Relu, and MATMUL. Those operations could cause more than 50% or even nearly 90% error rate if there was even a single bit flip on the output. 
+2.	In comparing Rand-Element and BitFit-Element fault injection types, we observe that Rand-element fault type results in lower SDC rates in nearly all operators except for MATMUL. This could be attributed to the fact that random value fault causes lesser value deviation than the bit-flip fault type and also random value fault is less likely to occur than bit-flip fault type in reality. 
+
+<p align="center">
+   <img src="./readme/report2.png" width="300" alt=""/>
 </p>
 
-+ Use **Tensorboard** to visualize training, then open [http://127.0.1.1:6006](http://127.0.1.1:6006) in your web browser, 
-following figure shows the step-by-step training of given model in [./data/models/model.ckpt](./data/models) as well as
-log files in [./logs](./logs/).
-   ```bash
-   $ cd $ROOT
-   $ workon python1.0.0
-   (python1.0.0) $ tensorboard --logdir=./logs
-   I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcublas.so.8.0 locally
-   I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcudnn.so.5 locally
-   I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcufft.so.8.0 locally
-   I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcuda.so.1 locally
-   I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcurand.so.8.0 locally
-   Starting TensorBoard 41 on port 6006
-   (You can navigate to http://127.0.1.1:6006)
-   ```
-
-## Visualization of Internal CNN State
-　This demonstrates that the CNN learned to detect useful road features on its own, i.e., with only the human steering
-angle as training signal. 
-
-　Show the activations of the first two feature map layers as following:
-   ```bash
-   $ cd $ROOT
-   $ workon python1.0.0
-   (python1.0.0) $ python src/show_activation.py
-   ```
-<p align="center">
-   <img src="./readme/Visualization of Internal CNN State.png" width="720" alt=""/>
-</p>
+Image 4 shows the graphs obtained from injecting BitFlip and Random Element faults at varying fault injection rate to the multiple operators of the system. As expected, we observe that in both fault injection types, the higher fault injection rates result in higher SDC rates for all operators. Furthermore, similar to the previous analysis, the four most sensitive operators are MUL, Add, Relu, and MATMUL. These consistent observations lead us to believe that the PilotNet model is easily affected by even a single bit flip fault or randomly shuffled data. Furthermore, it shows the most vulnerable operators are also the most commonly used operators of the model giving us a larger cause for concern. Having identified the system vulnerabilities and propensity of error upon fault injection, we must identify ways to avoid the introduction of such faults into the system. The following section makes some recommendations for improving the system’s robustness. 

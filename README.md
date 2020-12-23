@@ -67,3 +67,7 @@ Image 3 depicts the result of the first two metrics which inject one BitFlip-Ele
 </p>
 
 Image 4 shows the graphs obtained from injecting BitFlip and Random Element faults at varying fault injection rate to the multiple operators of the system. As expected, we observe that in both fault injection types, the higher fault injection rates result in higher SDC rates for all operators. Furthermore, similar to the previous analysis, the four most sensitive operators are MUL, Add, Relu, and MATMUL. These consistent observations lead us to believe that the PilotNet model is easily affected by even a single bit flip fault or randomly shuffled data. Furthermore, it shows the most vulnerable operators are also the most commonly used operators of the model giving us a larger cause for concern. Having identified the system vulnerabilities and propensity of error upon fault injection, we must identify ways to avoid the introduction of such faults into the system. The following section makes some recommendations for improving the system’s robustness. 
+
+
+## About us
+This project is done as our capstone project for our Master of Engineering Leadership program at UBC. Our team includes me PHOEBE LE, ANUPAM YADAV, and GEETIKA SINGH POTDAR. 

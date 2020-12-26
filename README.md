@@ -70,4 +70,4 @@ Image 4 shows the graphs obtained from injecting BitFlip and Random Element faul
 
 
 ## About us
-This project is done as our capstone project for our Master of Engineering Leadership program at UBC. Our team includes me PHOEBE LE, ANUPAM YADAV, and GEETIKA SINGH POTDAR. 
+This project is done as our capstone project for our Master of Engineering Leadership program at UBC. Our team includes me PHUONG LE (PHOEBE), ANUPAM YADAV, and GEETIKA SINGH POTDAR. 
